@@ -14,4 +14,17 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
+
+    <!-- User info badge -->
+    <style name="UserInfoBadgeStyle">
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorBadgeText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/bg_item_user_info_badge</item>
+    </style>
+
 </resources>
