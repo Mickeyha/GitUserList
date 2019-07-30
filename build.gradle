@@ -30,4 +30,9 @@ task clean(type: Delete) {
 ext {
     circle_image_version = "3.0.0"
     recyclerview_version = "1.0.0"
+    koin_version = "2.0.1"
+    timber_version = "4.7.1"
+    retrofit_version = "2.3.0"
+    okhttpLoggingInterceptorVersion = "3.9.0"
+    rx_adapter_version = "2.6.0"
 }
