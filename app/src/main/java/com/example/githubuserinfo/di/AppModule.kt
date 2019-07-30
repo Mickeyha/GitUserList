@@ -3,8 +3,10 @@ package com.example.githubuserinfo.di
 import com.example.githubuserinfo.api.GithubService
 import com.example.githubuserinfo.api.GithubService.Companion.GITHUB_BASE_URL
 import com.example.githubuserinfo.repo.UserInfoRepository
+import com.example.githubuserinfo.viewmodel.UserInfoViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -20,6 +22,9 @@ val repositoryModule = module {
     factory { UserInfoRepository() }
 }
 
+val viewModelModule = module {
+    viewModel{ UserInfoViewModel() }
+}
 
 fun generateOkHttpClient(): OkHttpClient =
     OkHttpClient.Builder()
@@ -40,5 +45,6 @@ fun generateGithubService(retrofit: Retrofit): GithubService =
 
 val appModule = listOf (
     networkModule,
-    repositoryModule
+    repositoryModule,
+    viewModelModule
 )

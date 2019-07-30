@@ -19,7 +19,7 @@ class UserInfoRepository : KoinComponent {
         val dataSource = UserInfoDataSourceFactory()
         val pagedLIstConfig = PagedList.Config.Builder()
             .setPageSize(PAGE_SIZE)
-            .setPrefetchDistance(4)
+            .setPrefetchDistance(PREFETCH_DISTANCE)
             .build()
 
         return RxPagedListBuilder(dataSource, pagedLIstConfig)
