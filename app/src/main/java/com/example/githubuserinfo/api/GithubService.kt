@@ -3,6 +3,8 @@ package com.example.githubuserinfo.api
 import com.example.githubuserinfo.model.UserDetailInfo
 import com.example.githubuserinfo.model.UserInfo
 import io.reactivex.Single
+import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -22,7 +24,7 @@ interface GithubService {
     fun getUsers (
         @Query("since") since: Int,
         @Query("per_page") perPage: Int
-    ): Single<List<UserInfo>>
+    ): Call<List<UserInfo>>
 
     /**
      * get user data with url
@@ -30,7 +32,7 @@ interface GithubService {
     @GET
     fun getUsers (
         @Url url: String
-    ): Single<List<UserInfo>>
+    ): Single<Response<List<UserInfo>>>
 
 
     @GET("/users/{username}")

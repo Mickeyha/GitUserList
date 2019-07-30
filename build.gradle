@@ -35,4 +35,7 @@ ext {
     retrofit_version = "2.3.0"
     okhttpLoggingInterceptorVersion = "3.9.0"
     rx_adapter_version = "2.6.0"
+    paging_version = "2.1.0"
+    rx_android_version = "2.0.1"
+    rx_java_version = "2.1.7"
 }
