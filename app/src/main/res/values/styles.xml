@@ -27,4 +27,11 @@
         <item name="android:background">@drawable/bg_item_user_info_badge</item>
     </style>
 
+    <!-- User detail view -->
+    <style name="UserDetailImageStyle">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
 </resources>

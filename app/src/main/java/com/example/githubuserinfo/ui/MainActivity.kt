@@ -44,7 +44,8 @@ class MainActivity : AppCompatActivity() {
         handleProgressBar()
         handleErrorMessage()
         userInfoListAdapter.onItemClick.observe(this, Observer {
-            Timber.d("onItemClick, $it")
+            UserDetailDialogFragment.createInstance(it)
+                .show(supportFragmentManager, UserDetailDialogFragment::class.java.name)
         })
 
         setSupportActionBar(toolbar)

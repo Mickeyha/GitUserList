@@ -13,4 +13,10 @@
     <!-- main page -->
     <color name="colorSeparator">#e0e0e0</color>
 
+    <!--user detail-->
+    <color name="colorUserDetailLink">#5e97e1</color>
+    <color name="colorUserDetailBackground">#ffffff</color>
+    <color name="colorUserDetailTextColor">#1f1f1f</color>
+    <color name="colorUserDetailImageColor">#7f7f7f</color>
+    <color name="colorUserAvatarPlaceHolderColor">#7f7f7f</color>
 </resources>
