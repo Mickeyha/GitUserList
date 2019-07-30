@@ -3,6 +3,7 @@ package com.example.githubuserinfo.di
 import com.example.githubuserinfo.api.GithubService
 import com.example.githubuserinfo.api.GithubService.Companion.GITHUB_BASE_URL
 import com.example.githubuserinfo.repo.UserInfoRepository
+import com.example.githubuserinfo.viewmodel.UserDetailViewModel
 import com.example.githubuserinfo.viewmodel.UserInfoViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -24,6 +25,7 @@ val repositoryModule = module {
 
 val viewModelModule = module {
     viewModel{ UserInfoViewModel() }
+    viewModel{ UserDetailViewModel() }
 }
 
 fun generateOkHttpClient(): OkHttpClient =
