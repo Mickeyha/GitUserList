@@ -21,11 +21,11 @@ class UserDetailBlogView @JvmOverloads constructor (
     }
 
     fun setData(blogUrl: String?) {
-        // blog pic
+        // blogUrl pic
         image_blog.colorFilter =
             LightingColorFilter(Color.WHITE, ContextCompat.getColor(this.context, R.color.colorUserDetailImageColor))
 
-        // blog url
+        // blogUrl url
         blogUrl?.run {
             text_blog.text = blogUrl
         }

@@ -10,5 +10,5 @@ data class UserDetailInfo (
     @field:SerializedName("bio") var bio: String = "",
     @field:SerializedName("name") var name: String = "",
     @field:SerializedName("location") var location: String = "",
-    @field:SerializedName("blog") var blog: String = ""
+    @field:SerializedName("blogUrl") var blogUrl: String = ""
 )
