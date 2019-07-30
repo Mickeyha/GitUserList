@@ -16,7 +16,6 @@ import com.example.githubuserinfo.viewmodel.UserInfoViewModel
 
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,19 +35,27 @@ class MainActivity : AppCompatActivity() {
         initAdapter()
 
         // get users
+        startGetUsers()
+
+        observeIsLoading()
+        observeErrorMessage()
+        observeOnItemClicked()
+
+        setSupportActionBar(toolbar)
+    }
+
+    private fun startGetUsers() {
         viewModel.getUsers()
         viewModel.userInfoList.observe(this, Observer<PagedList<UserInfo>> {
             userInfoListAdapter.submitList(it)
         })
+    }
 
-        handleProgressBar()
-        handleErrorMessage()
+    private fun observeOnItemClicked() {
         userInfoListAdapter.onItemClick.observe(this, Observer {
             UserDetailDialogFragment.createInstance(it)
                 .show(supportFragmentManager, UserDetailDialogFragment::class.java.name)
         })
-
-        setSupportActionBar(toolbar)
     }
 
     private fun initAdapter() {
@@ -59,7 +66,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // show/hide progress bar
-    private fun handleProgressBar() {
+    private fun observeIsLoading() {
         viewModel.isLoading.observe(this, Observer {
             if (it) {
                 binding.progressBar.visibility = View.VISIBLE
@@ -70,7 +77,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // show error toast
-    private fun handleErrorMessage() {
+    private fun observeErrorMessage() {
         viewModel.errorMessage.observe(this, Observer {
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
         })

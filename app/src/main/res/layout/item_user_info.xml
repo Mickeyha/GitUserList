@@ -4,14 +4,15 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorUserDetailBackground">
 
     <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide_line_left"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="10dp"/>
+            app:layout_constraintGuide_begin="@dimen/item_user_info_margin_start"/>
 
     <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide_line_right"
