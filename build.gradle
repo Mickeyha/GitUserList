@@ -29,4 +29,5 @@ task clean(type: Delete) {
 
 ext {
     circle_image_version = "3.0.0"
+    recyclerview_version = "1.0.0"
 }

@@ -9,4 +9,7 @@
     <color name="colorBadgeText">#ffffff</color>
     <color name="colorBadgeBackground">#3971D5</color>
 
+    <!-- main page -->
+    <color name="colorSeparator">#e0e0e0</color>
+
 </resources>
