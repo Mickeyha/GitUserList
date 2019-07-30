@@ -44,7 +44,7 @@
             app:layout_constraintLeft_toLeftOf="@+id/guide_line_left"/>
 
     <TextView
-            android:id="@+id/text_user_login"
+            android:id="@+id/text_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -65,8 +65,8 @@
             android:visibility="gone"
             android:text="@string/user_info_badge_staff"
             style="@style/UserInfoBadgeStyle"
-            app:layout_constraintTop_toBottomOf="@id/text_user_login"
-            app:layout_constraintStart_toStartOf="@id/text_user_login"
+            app:layout_constraintTop_toBottomOf="@id/text_login"
+            app:layout_constraintStart_toStartOf="@id/text_login"
             app:layout_constraintBottom_toBottomOf="@id/image_user"
             tools:visibility="visible"/>
 
