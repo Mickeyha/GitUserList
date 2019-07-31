@@ -1,5 +1,5 @@
 # GitUserList
-kotlin + koin + Retrofit + RxJava + MVVM
+[Paging Library](https://developer.android.com/topic/libraries/architecture/paging) + kotlin + koin + Retrofit + RxJava + MVVM
 
 ## Tools
 ### Log
